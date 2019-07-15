@@ -6,6 +6,7 @@ using System.Text;
 
 namespace ArdalisRating
 {
+    // Encoding Format - Serialization
     public class FilePolicySerializer
     {
         public Policy GetPolicyFromJsonString(string policyJson)

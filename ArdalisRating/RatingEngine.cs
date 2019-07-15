@@ -16,13 +16,15 @@ namespace ArdalisRating
         public decimal Rating { get; set; }
         public void Rate()
         {
+            // Logging - how is delegated
             Logger.Log("Starting rate.");
 
             Logger.Log("Loading policy.");
 
-            // load policy - open file policy.json
+            // Persistence - how is delegated
             var policyJson = PolicySource.GetPolicyFromSource();
 
+            // Encoding Format - how is delegated
             var policy = PolicySerializer.GetPolicyFromJsonString(policyJson);
 
             switch (policy.Type)
